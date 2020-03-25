@@ -1,0 +1,252 @@
+h2{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Oxanium', cursive;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+    background: url("./images/table_bg.jpg") center;    
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column;
+}
+
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-around;
+    margin-top: auto;
+}
+
+.board-wrapper{
+    display: flex;
+    /* justify-content: center; */
+}
+
+.blackjackBoard{
+    height: 50vh;
+    min-height: fit-content;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+}
+
+.board{
+    height: 90%;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    flex-flow: column;
+}
+
+.player{
+    border-right: 1px solid lightgoldenrodyellow;
+}
+
+.player h2 {
+    align-self: flex-start;
+    color: ivory;
+    padding: 10px 0;
+}
+
+.dealer h2 {
+    align-self: flex-end;
+    color: ivory;
+    padding: 10px 0;
+}
+
+.player, .dealer{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.board {
+    height: 50vh;
+
+}
+.player-cards, .dealer-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    max-width: 20%;
+    margin: 5px;
+}
+
+.challengeTitle{
+    text-transform: uppercase;
+    background-color: yellowgreen;
+    padding: 10px 0;
+}
+
+.container-flex-result {
+    display: flex;
+    flex-flow: column;
+    margin-top: auto;
+}
+
+.container-flex-result-table {
+    display: flex;
+    border-top: 1px solid ivory;
+    justify-content: center;
+}
+
+th, td {
+    width: 50px;
+    height: 30px;
+    color: ivory;
+}
+
+.btn {
+    font-family: 'Oxanium', cursive;
+    margin: 10px 10px;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.btn:hover {
+    color: black;
+}
+
+.btn-calc{
+    background-color: cadetblue;
+}
+
+.btn-reset{
+    background-color: crimson;
+}
+
+.btn-cats{
+    background-color: darkseagreen;
+}
+
+.btn-new{
+    background-color: royalblue;
+}
+
+.hand-finish{
+    position: absolute;
+    bottom: 50%;
+    display: flex;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 100%;
+    font-size: 2.5rem;
+    height: 100px;
+    line-height: 100px;
+    flex-flow: column-reverse;
+}
+
+.card-show{
+    animation-name: card-show;
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.card-hide{
+    display: none;
+    animation-name: card-hide;
+    animation-duration: 300ms;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes card-show{
+    0%{
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes card-hide{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    100%{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .blackjackBoard{
+        height: 50vh;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        display: flex;
+        align-self: center;
+        flex-flow: column;
+    }
+
+    .player-cards, .dealer-cards{
+        display: flex;
+        min-width: 90%;
+        /* height: fit-content; */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .player h2 {
+        align-self: center;
+        color: ivory;
+    }
+
+    .player{
+        border: none;
+    }
+
+    .dealer h2 {
+        align-self: center;
+        color: ivory;
+    }
+
+    .hand-finish{
+        position: fixed;
+        /* bottom: 0; */
+        display: flex;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        width: 100%;
+        font-size: 2.5rem;
+        height: 100px;
+        line-height: 100px;
+        flex-flow: column-reverse;
+    }
+}

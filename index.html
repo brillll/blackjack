@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Oxanium:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Blackjack</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="challengeTitle">Blackjack</h2>
+            <div class="blackjackBoard">
+                <div class="board player">
+                    <h2>You: <span id="player-score">0</span></h2>
+                    <div class="player-cards"></div>
+                </div>
+                <div class="board dealer">
+                    <h2>Dealer: <span id="dealer-score">0</span></h2>
+                    <div class="dealer-cards"></div>
+                </div>
+            </div>
+        <div class="container-flex-result">
+            <div class="container-flex">
+                <div class="game-buttons">
+                    <button class="btn btn-calc" id="hitBtn" onclick="manageHit(YOU)">Hit</button>
+                    <button class="btn btn-new" id="standBtn" onclick="manageStand()">Stand</button>
+                    <button class="btn btn-reset" id="dealBtn" onclick="manageDeal(0)">Deal</button>
+                </div>
+            </div>
+            <div class="container-flex-result-table">
+                <table>
+                    <tr>
+                        <th>Win</th>
+                        <th>Lose</th>
+                        <th>Draw</th>
+                    </tr>
+                    <tr>
+                        <td id="win">0</td>
+                        <td id="lose">0</td>
+                        <td id="draw">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
